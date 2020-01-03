@@ -1,4 +1,16 @@
-const paragrafos = document.querySelectorAll('p');
-console.log(paragrafos);
+const tabmenu = document.querySelectorAll('.js-tabmenu li');
+const tabcontent = document.querySelectorAll('.js-tabcontent section');
 
-paragrafos.forEach((item) => console.log(item.innerText));
+function activeTab(index) {
+    tabcontent.forEach((section) => {
+        section.classList.remove('active');
+    });
+    tabcontent[index].classList.add('active');
+
+}
+
+tabmenu.forEach((itemMenu, index) => {
+    itemMenu.addEventListener('click', () => {
+        activeTab(index);
+    } )
+});

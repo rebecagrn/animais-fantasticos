@@ -96,6 +96,10 @@ body {
   grid-column: 2;
 }
 
+.animais-lista li {
+  cursor: pointer;
+}
+
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
@@ -177,6 +181,26 @@ body {
   padding: 20px;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
+}
+
+.js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.active {
+  display: block !important;
+  animation: show .6s forwards;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate3d(-30, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (max-width: 700px) {
