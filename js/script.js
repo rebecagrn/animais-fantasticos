@@ -22,8 +22,8 @@ Tabnav();
 /** Accordion List */
 function initAccordion() {
     const accordionList = document.querySelectorAll('.js-accordion dt');
-    accordionList[0].classList.add('active');
-    accordionList[0].nextElementSibling.classList.add('active');;
+    accordionList[0].classList.toggle('active');
+    accordionList[0].nextElementSibling.classList.toggle('active');;
 
     function activeAccordion() {
         this.classList.toggle('active');
