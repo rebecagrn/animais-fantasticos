@@ -58,3 +58,19 @@ function initscrollSuave() {
     });
 }
 initscrollSuave();
+
+/** animate Scroll */
+
+/**const sections = document.querySelectorAll('.animateScroll');
+const windowHeight = window.innerHeight * 0.6;
+
+function animeScroll() {
+    sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top - windowHeight;
+        if (sectionTop < 0) {
+            section.classList.add('active');
+        }
+    })
+}
+
+window.addEventListener('scroll', animeScroll);*/
