@@ -39,7 +39,6 @@ function initAccordion() {
 initAccordion();
 
 /** Scroll suave */
-
 function initscrollSuave() {
     const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
 
@@ -60,17 +59,25 @@ function initscrollSuave() {
 initscrollSuave();
 
 /** animate Scroll */
+function initAnimeScroll() {
+    const sections = document.querySelectorAll('.animateScroll');
+    if (sections.length) {
+        const windowHeight = window.innerHeight * 0.5;
 
-/**const sections = document.querySelectorAll('.animateScroll');
-const windowHeight = window.innerHeight * 0.6;
-
-function animeScroll() {
-    sections.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top - windowHeight;
-        if (sectionTop < 0) {
-            section.classList.add('active');
+        function animeScroll() {
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top - windowHeight;
+                if (sectionTop < 0) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            })
         }
-    })
-}
 
-window.addEventListener('scroll', animeScroll);*/
+        animeScroll();
+
+        window.addEventListener('scroll', animeScroll);
+    }
+}
+initAnimeScroll();
