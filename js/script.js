@@ -1,5 +1,5 @@
 /** Navtab */
-function Tabnav() {
+function initTabnav() {
     const tabmenu = document.querySelectorAll('.js-tabmenu li');
     const tabcontent = document.querySelectorAll('.js-tabcontent section');
 
@@ -17,7 +17,7 @@ function Tabnav() {
         })
     });
 }
-Tabnav();
+initTabnav();
 
 /** Accordion List */
 function initAccordion() {
